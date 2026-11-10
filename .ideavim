@@ -1,0 +1,106 @@
+" https://gist.github.com/iberianpig/55af3187411781b41066
+
+" 行数の表示
+set number
+
+"大文字小文字の区別なし
+set ignorecase
+
+"検索時に大文字を含んでいたら大/小を区別
+set smartcase
+
+set incsearch
+
+set hlsearch
+
+" OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
+set clipboard=unnamed,unnamedplus,ideaput
+
+" インクリメントモードを10進数のみにする
+set nrformats=
+
+set ideajoin
+
+"set smartjoin
+
+let mapleader=" "
+
+" 入力モード中に素早くJJと入力した場合はESCとみなす
+inoremap jj <Esc>
+inoremap jk <Esc>
+
+" 挿入モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" :actionlist
+nmap <C-h>   <Action>(Back)
+" noremap <S-j>   }
+" noremap <S-k>   {
+nmap <C-l>   <Action>(Forward)
+nmap <C-;>   <Action>(GotoDeclaration)
+
+" scroll up down 
+nmap <C-j> <C-e>
+nmap <C-k> <C-y>
+
+nmap <leader>f <Action>(Find)
+vmap <leader>f <Action>(Find)
+
+nmap <leader>r <Action>(Replace)
+vmap <leader>r <Action>(Replace)
+
+" n で画面中央に表示する
+nmap n nzz
+nmap N Nzz
+
+" 連続でインデント可能にする
+vmap > >gv
+vmap < <gv
+
+
+nmap <C-1> <Action>(StepInto)
+nmap <C-2> <Action>(StepOver)
+nmap <C-3> <Action>(StepOut)
+nmap <C-4> <Action>(Resume)
+nmap <C-5> <Action>(ToggleLineBreakpoint)
+
+
+" sethandler <S-CR> a:vim
+sethandler <C-Pageup> a:vim
+sethandler <C-Pagedown> a:vim
+sethandler <S-Up> a:vim
+sethandler <C-1> a:vim
+sethandler <C-2> a:vim
+sethandler <C-S-2> a:ide
+sethandler <C-3> a:vim
+sethandler <C-5> a:vim
+sethandler <C-B> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:vim
+sethandler <C-E> a:ide
+sethandler <C-F> a:ide
+sethandler <C-G> a:ide
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:ide
+sethandler <C-N> a:ide
+sethandler <C-O> a:ide
+sethandler <C-P> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-R> a:ide
+sethandler <C-S> a:ide
+sethandler <C-T> a:ide
+sethandler <C-U> a:vim
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
+sethandler <C-X> a:vim
+sethandler <C-Y> a:vim
+sethandler <C-[> a:vim
+sethandler <C-\> a:ide
+sethandler <C-]> a:vim
+
